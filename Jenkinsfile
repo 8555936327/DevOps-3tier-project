@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Validate') {
             steps {
-                withAWS(credentials: 'aws-creds', region: 'ap-south-a') {
+                withAWS(credentials: 'aws-creds', region: 'ap-south-1') {
                 sh 'terraform -chdir=eks/ validate'
                 }
             }
